@@ -4,8 +4,8 @@ from . import views
 # URLConfigurations
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('', views.about, name='about'),
-    path('', views.features, name='features'),
-    path('', views.contact, name='contact'),
+    path('index', views.index, name='index'),
+    path('about', views.about, name='about'),
+    path('features', views.features, name='features'),
+    path('contact', views.contact, name='contact'),
 ]
