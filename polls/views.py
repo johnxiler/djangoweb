@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
-def index(request):
+def blog(request):
     return render(request, 'blog.html')
 
 

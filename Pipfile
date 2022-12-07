@@ -11,6 +11,7 @@ plotly = "*"
 whitenoise = "*"
 heroku = "*"
 django-heroku = "*"
+django-pwa = "*"
 
 [dev-packages]
 autopep8 = "*"
