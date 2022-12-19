@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sessions',
     'polls',
     'debug_toolbar'
 ]
@@ -54,7 +55,7 @@ MIDDLEWARE = [
 
 INTERNAL_IPS = [
     # default ip for development.
-    '127.0.0.1',
+    # '127.0.0.1',
 ]
 
 ROOT_URLCONF = 'mywebsite.urls'
