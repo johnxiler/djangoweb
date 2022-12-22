@@ -8,7 +8,7 @@
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Patara Magazine & Blog Html Theme / Features</title>
+		<title>Contact</title>
 		<meta name="description" content="">
 
 		<!-- Mobile Specific Metas
@@ -24,8 +24,11 @@
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		{% load static %}
 		<link rel="stylesheet" href="{% static "css/styles.css" %}">
-
-
+         <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+     
 		<!-- Favicon
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<link rel="shortcut icon" href="./favicon.ico"/>
@@ -45,11 +48,10 @@
 
 						<div class="socials">
 							<ul>
-								<li><a href="#!"><i class="icon-pinterest-circled"></i></a></li>
-								<li><a href="#!"><i class="icon-gplus-circled"></i></a></li>
-								<li><a href="#!"><i class="icon-facebook-circled"></i></a></li>
-								<li><a href="#!"><i class="icon-twitter-circled"></i></a></li>
-								<li><a href="#!"><i class="icon-vimeo-circled"></i></a></li>
+								<li><a href="https://www.facebook.com/RelixJohn"><i class="fa-brands fa-facebook"></i></a></li>
+								<li><a href="https://twitter.com/RelixJohn"><i class="fa-brands fa-square-twitter"></i></a></li>
+								<li><a href="https://vimeo.com/user165664703"><i class="fa-brands fa-vimeo"></i></a></li>
+								<li><a href="https://github.com/johnxiler"><i class="fa-brands fa-github"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -87,10 +89,10 @@
 		<nav class="nav container">
 			 
 			<ul>
-				<li><a href="/polls/blog">Blog</a></li>
-				<li><a href="/polls/about">About</a></li>
-				<li><a href="/polls/features">Features</a></li>
-				<li><a href="/polls/contact">Contact</a></li>
+				<li><a href="{{'blog'}}">Blog</a></li>
+				<li><a href="{{'about'}}">About</a></li>
+				<li><a href="{{'features'}}">Features</a></li>
+				<li><a href="{{'contact'}}">Contact</a></li>
 			</ul>
 				
 		</nav>

@@ -14,6 +14,8 @@ django-heroku = "*"
 django-pwa = "*"
 django-browser-reload = "*"
 reloadium = "*"
+fontawesomefree = "*"
+django-crispy-forms = "*"
 
 [dev-packages]
 autopep8 = "*"

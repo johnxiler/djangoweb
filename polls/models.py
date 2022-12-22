@@ -1,3 +1,4 @@
+import requests
 from django.conf import settings
 from django.db import models
 from django.contrib.contenttypes.fields import GenericForeignKey
@@ -26,6 +27,42 @@ class ObjectViewed(models.Model):
         verbose_name = 'Object Viewed'
         verbose_name_plural = 'Objects Viewed'
 
+
+class Translation(models.Model):
+    source_language = models.CharField(max_length=2)
+    target_language = models.CharField(max_length=2)
+    source_text = models.TextField()
+    translated_text = models.TextField(blank=True)
+
+    def translate(self):
+        # Set the API endpoint and API key
+        endpoint = 'https://api-platform.systran.net/translation/text/translate'
+        api_key = 'YOUR_API_KEY'
+
+        # Set the payload for the API request
+        payload = {
+            'source': self.source_language,
+            'target': self.target_language,
+            'input': self.source_text
+        }
+
+        # Set the headers for the API request
+        headers = {
+            'X-Request-ID': 'unique_request_id',
+            'X-Relayer-Host': 'api-platform.systran.net',
+            'Authorization': f'Apikey {api_key}',
+            'Content-Type': 'application/json'
+        }
+
+        # Make the API request
+        response = requests.post(endpoint, json=payload, headers=headers)
+
+        # Get the translated text from the response
+        translated_text = response.json()['outputs'][0]['output']
+
+        # Save the translated text to the model
+        self.translated_text = translated_text
+        self.save()
 
 # class Question(models.Model):
 #     question_text = models.CharField(max_length=200)

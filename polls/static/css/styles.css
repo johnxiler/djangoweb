@@ -1303,9 +1303,9 @@ Top Bar
   box-sizing: border-box;
 }
 
-.top-bar .box.box-1 {
+/* .top-bar .box.box-1 {
   width: 80%;
-}
+} */
 
 .top-bar .box.box-2 {
   width: 20%;
@@ -1313,7 +1313,7 @@ Top Bar
 
 .search-box {
   margin-bottom: 0;
-  float: right;
+  float: left;
 }
 
 .search-box p {
@@ -1338,6 +1338,7 @@ Top Bar
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
+
 }
 
 .search-box input.search_bar:hover {
