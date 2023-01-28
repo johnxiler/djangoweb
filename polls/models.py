@@ -64,6 +64,25 @@ class Translation(models.Model):
         self.translated_text = translated_text
         self.save()
 
+
+class basicinfo(models.Model):
+    id = models.IntegerField(primary_key=True)
+    Firstname = models.CharField(max_length=60)
+    Lastname = models.CharField(max_length=60)
+    nickname = models.CharField(max_length=60)
+    email = models.CharField(max_length=60)
+    salary = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['Firstname']),
+            models.Index(fields=['Lastname']),
+            models.Index(fields=['nickname']),
+            models.Index(fields=['email']),
+            models.Index(fields=['salary']),
+        ]
 # class Question(models.Model):
 #     question_text = models.CharField(max_length=200)
 #     pub_date = models.DateTimeField('date published')

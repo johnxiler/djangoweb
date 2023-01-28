@@ -1,0 +1,94 @@
+
+{%load static %}
+{% include 'bitss/navbar.html' %}
+<section class="sub-page container">
+<h3>Hello Client</h3>
+<p>This is my personal portfolio as well as a personal blog i want to write all my experiences or journey in programming as an IT student where struggles,shortcomings and solutions to overcome it for a purpose of myself looking back on my stories.</p>
+<hr/> 
+</section>
+<section class="sub-page container">
+  <div class="six columns">
+  <h3>Add New Personnel</h3>
+  <form method="POST">
+    {% csrf_token %}
+    <label>Firstname: </label><br><input type="text" name="firstname"/><br>
+    <label>Lastname: </label><br><input type="text" name="lastname"/><br>
+    <label>Nickname: </label><br><input type="text" name="nick"/><br>
+    <label>Email: </label><br><input type="text" name="email"/><br>
+    <label>Salary: </label><br><input type="text" name="salary"/><br>
+    <button type='submit'>Submit</button>
+  </form>
+  
+</div>
+<br>
+<div class="six columns">
+  <table>
+    <thead>
+      <th>Firstname</th>
+    
+      <th>Lastname</th>
+     
+      <th>Nickname</th>
+     
+      <th>Email</th>
+     
+      <th>Salary</th>
+    </thead>
+    <tbody>
+      <br>
+          <tr>
+            {% for instance in queryset %}
+            <td>{{ instance.Firstname}}</td>
+            <td>{{ instance.Lastname }}</td>
+            <td>{{ instance.Nickname }}</td>
+            <td>{{ instance.Email }}</td>
+            <td>{{ instance.Salary }}</td>
+            <td>
+              <button><a href="#">Edit</a></button>
+              {% comment %} {% 'edit.py?id=print row['id']'  %} {% endcomment %}
+              <button><a href="#">Delete</a></button>
+              {% comment %} {% 'delete.py?id=print row['id']' %} {% endcomment %}
+            </td>
+            {% endfor %}
+          </tr>
+    </tbody>
+  </table>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+  <div class="inner">
+    <div class="container">
+      <div class="copyright">
+        <span class="sub">Created By: <a class="" href="" target="_blank">Relix</a></span>
+      </div>
+
+
+      <a href="#0" class="backtotop">Top</a>
+
+
+    </div>
+  </div>
+</footer>
+
+
+{% comment %} <script src="{% static 'js/scripts.js' %}"></script>
+
+<script>
+
+  $('article #info').readmore({
+    speed: 600,
+    moreLink: '<a class="button-text" href="#">Read More <span>&darr;</span></a>',
+    lessLink: '<a class="button-text" href="#">Read Less <span>&uarr;</span></a>',
+    collapsedHeight: 120,
+    heightMargin: 20,
+    afterToggle: function(trigger, element, expanded) {
+        if(! expanded) { // The "Close" link was clicked
+        $('html, body').animate({scrollTop: element.offset().top}, {duration: 300});
+      }
+    }
+  });
+
+  </script> {% endcomment %}
+</html>
+ 

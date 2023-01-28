@@ -16,3 +16,7 @@ def features(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+def crudgen(request):
+    return render(request, 'crudgen.html')

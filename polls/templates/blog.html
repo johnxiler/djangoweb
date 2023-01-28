@@ -8,7 +8,7 @@
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>relix blog</title>
+		<title>Relix Blog</title>
 		<meta name="description" content="">
 
 		<!-- Mobile Specific Metas
@@ -23,7 +23,7 @@
 		<!-- CSS
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		{% load static %}
-		<link rel="stylesheet" href="{% static "css/styles.css" %}">
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
          <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
     <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
@@ -71,7 +71,7 @@
 			<div class="container">
 				<div class="logo">
 					<a href="{{ 'blog' }}">
-						<h1>RELIX</h1>
+						<h1>RELIX</h1><p>&nbsp</p>
 						<h6>Personal Blog</h6>
 					</a>
 				</div>
@@ -86,6 +86,7 @@
 					<li><a href="{{'about'}}">About</a></li>
 					<li><a href="{{'features'}}">Features</a></li>
 					<li><a href="{{'contact'}}">Contact</a></li>
+					<li><a href="{{'crudgen'}}">CMS</a></li>
 				</ul>				
 			</nav>
 		</section>
@@ -117,7 +118,6 @@
 						</div>
 					</div>
 				</header>
-
 				<div class="entry-content" id="info">
 	
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate eros ac posuere efficitur. Nunc bibendum cursus convallis. Praesent aliquam gravida lacus, a pharetra lorem dignissim ac. Vivamus at elit quam. Proin eu libero vel dolor bibendum lacinia.</p>
@@ -460,7 +460,7 @@
 		</footer>
 
 
-		<script src={% static "js/scripts.js" %}></script>
+		<script src="{% static 'js/scripts.js'%}"></script>
 
 		<script>
 		
